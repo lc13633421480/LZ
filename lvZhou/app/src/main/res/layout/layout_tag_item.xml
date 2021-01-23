@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
         android:id="@+id/img_tag"
+        android:src="@mipmap/login_btn_qq_normal"
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_20"
         app:layout_constraintLeft_toLeftOf="parent"

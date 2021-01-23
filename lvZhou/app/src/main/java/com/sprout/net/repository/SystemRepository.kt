@@ -40,8 +40,8 @@ class SystemRepository {
         serviceApi.getBrand(page,size)
     }
 
-    suspend fun getGood(page:Int,size:Int) = withContext(Dispatchers.IO){
-        serviceApi.getGood(page,size)
+    suspend fun getGoods(page:Int,size:Int) = withContext(Dispatchers.IO){
+        serviceApi.getGood(page, size)
     }
 
     suspend fun login(username:String,pw:String) = withContext(Dispatchers.IO){

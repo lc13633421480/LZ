@@ -24,14 +24,11 @@ interface ServiceApi {
     @GET("tag/brand")
     suspend fun getBrand(@Query("page") page:Int,@Query("size") size:Int):BaseResp<BrandData>
 
-    @GET("tag/good")
+    //tag/goods?page=1&size=10
+    @GET("tag/goods")
     suspend fun getGood(@Query("page") page:Int,@Query("size") size:Int):BaseResp<GoodData>
 
     //http://sprout.cdwan.cn/api/auth/login
-//    @POST("auth/login")
-//    @FormUrlEncoded
-//    suspend fun Login(@Field("username") username:String, @Field("password") password:String):BaseResp<LoginData>
-
     @POST("auth/login")
     @FormUrlEncoded
     suspend fun Login(

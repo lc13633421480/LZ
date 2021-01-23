@@ -1,13 +1,16 @@
 package com.sprout.model
 
 
+
+
 data class GoodData(
     val count: Int,
     val currentPage: Int,
     val `data`: List<Data>,
     val pageSize: Int,
     val totalPages: Int
-){
+)
+{
     data class Data(
         val id: Int,
         val name: String,
@@ -16,4 +19,3 @@ data class GoodData(
         val url: Any
     )
 }
-

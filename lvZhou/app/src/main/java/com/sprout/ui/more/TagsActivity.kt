@@ -48,13 +48,14 @@ class TagsActivity:BaseActivity<TagsViewModel,ActivityTagsBinding>(R.layout.acti
 
     override fun initView() {
         recyTags.layoutManager = LinearLayoutManager(this)
+
         var brandArr = SparseArray<Int>()
         brandArr.put(R.layout.layout_brand_item,BR.brandData)
         brandList = mutableListOf()
         brandAdapter = BrandAdapter(this,brandList,brandArr,BrandClick())
 
         var goodArr = SparseArray<Int>()
-        brandArr.put(R.layout.layout_brand_item,BR.goodData)
+        goodArr.put(R.layout.layout_good_item,BR.goodData)
         goodList = mutableListOf()
         goodAdapter = GoodAdapter(this,goodList,goodArr,GoodClick())
 
@@ -77,6 +78,7 @@ class TagsActivity:BaseActivity<TagsViewModel,ActivityTagsBinding>(R.layout.acti
             intent.putExtra("name",data.name)
             intent.putExtra("id",data.id)
             setResult(2,intent)
+            finish()
         }
 
     }
@@ -86,14 +88,14 @@ class TagsActivity:BaseActivity<TagsViewModel,ActivityTagsBinding>(R.layout.acti
             when(type){
                 1->{
                     if(brandList.size == 0){
-                        mViewModel.getBrand()
+                        mViewModel.getBrand(0,10)
                     }else{
                         recyTags.adapter = brandAdapter
                     }
                 }
                 2->{
                     if(goodList.size == 0){
-                        mViewModel.getGood()
+                        mViewModel.getGood(1,10)
                     }else{
                         recyTags.adapter = goodAdapter
                     }

@@ -2,6 +2,7 @@ package com.sprout.ui.more
 
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,7 +48,7 @@ class ImageFragment(
      */
     fun addTagsToView(type:Int,id:Int,name:String){
         var view = layoutInflater.inflate(R.layout.layout_tag_item,null)
-        var imgTag = view.findViewWithTag<ImageView>(R.id.img_tag)
+        var imgTag = view.findViewById<ImageView>(R.id.img_tag)
         var txtName = view.findViewById<TextView>(R.id.txt_name)
         txtName.setText(name)
         when(type){
