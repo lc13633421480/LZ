@@ -66,6 +66,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         Spannable()
 
         btn_login.setOnClickListener(this)
+        login_pw.setOnClickListener(this)
     }
 
     private fun Spannable() {

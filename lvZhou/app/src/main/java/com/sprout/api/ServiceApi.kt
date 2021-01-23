@@ -2,12 +2,12 @@ package com.sprout.api
 
 
 import com.sprout.bean.ChannelData
+import com.sprout.bean.LoginData
 import com.sprout.model.BaseResp
 import com.sprout.model.BrandData
 import com.sprout.model.GoodData
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import io.reactivex.Flowable
+import retrofit2.http.*
 
 /**
  * 网络请求API
@@ -27,5 +27,16 @@ interface ServiceApi {
     @GET("tag/good")
     suspend fun getGood(@Query("page") page:Int,@Query("size") size:Int):BaseResp<GoodData>
 
+    //http://sprout.cdwan.cn/api/auth/login
+//    @POST("auth/login")
+//    @FormUrlEncoded
+//    suspend fun Login(@Field("username") username:String, @Field("password") password:String):BaseResp<LoginData>
+
+    @POST("auth/login")
+    @FormUrlEncoded
+    suspend fun Login(
+        @Field("username") username: String,
+        @Field("password") pw: String
+    ): BaseResp<LoginData>
 
 }

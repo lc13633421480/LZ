@@ -44,5 +44,9 @@ class SystemRepository {
         serviceApi.getGood(page,size)
     }
 
+    suspend fun login(username:String,pw:String) = withContext(Dispatchers.IO){
+        serviceApi.Login(username,pw)
+    }
+
 
 }
