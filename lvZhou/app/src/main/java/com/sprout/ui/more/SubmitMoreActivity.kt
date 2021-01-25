@@ -64,7 +64,7 @@ class SubmitMoreActivity:BaseActivity<SubmitViewModel,ActivitySubmitMoreBinding>
 
     override fun initView() {
         recyImgs.layoutManager = GridLayoutManager(this,3)
-        recyImgs.addItemDecoration(DividerItemDecoration(this, LinearLayout.HORIZONTAL))
+//        recyImgs.addItemDecoration(DividerItemDecoration(this, LinearLayout.HORIZONTAL))
         var layouts = SparseArray<Int>()
         layouts.put(R.layout.layout_submit_imgitem,BR.submitData)
         imgAdapter = SubmitImgAdapter(this,imgs,layouts,ItemClick())
