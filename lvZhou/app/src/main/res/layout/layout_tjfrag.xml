@@ -10,6 +10,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -22,7 +23,8 @@
                 android:layout_height="0dp"
                 app:layout_collapseMode="pin"/>
             <com.google.android.material.tabs.TabLayout
-                app:tabSelectedTextColor="#34CC3A"
+                app:tabIndicatorHeight="@dimen/dp_0"
+                app:tabSelectedTextColor="#85C13F"
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/tab_tj"
                 app:tabMode="scrollable"

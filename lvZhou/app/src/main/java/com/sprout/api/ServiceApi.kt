@@ -3,6 +3,7 @@ package com.sprout.api
 
 import com.sprout.bean.ChannelData
 import com.sprout.bean.LoginData
+import com.sprout.bean.TrendsListData
 import com.sprout.model.BaseResp
 import com.sprout.model.BrandData
 import com.sprout.model.GoodData
@@ -36,4 +37,15 @@ interface ServiceApi {
         @Field("password") pw: String
     ): BaseResp<LoginData>
 
+    //sprout.cdwan.cn/api/trends/submitTrends
+    //发布动态
+    @POST("trends/submitTrends")
+    @FormUrlEncoded
+    suspend fun submit()
+
+    //sprout.cdwan.cn/api/trends/trendsList?command=1&page=2&size=5
+    //动态的列表数据
+    @GET("trends/trendsList")
+    suspend fun trendsList(@Query("command") command:Int,
+                           @Query("page")page : Int,@Query("size")size : Int):TrendsListData
 }

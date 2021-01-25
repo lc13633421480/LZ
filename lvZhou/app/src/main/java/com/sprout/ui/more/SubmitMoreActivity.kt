@@ -4,6 +4,7 @@ package com.sprout.ui.more
 import android.content.Intent
 import android.util.Log
 import android.util.SparseArray
+import android.view.View
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
@@ -55,7 +56,10 @@ class SubmitMoreActivity:BaseActivity<SubmitViewModel,ActivitySubmitMoreBinding>
     }
 
     override fun initVariable() {
+        //提交
+        txt_submit.setOnClickListener(View.OnClickListener {
 
+        })
     }
 
     override fun initView() {

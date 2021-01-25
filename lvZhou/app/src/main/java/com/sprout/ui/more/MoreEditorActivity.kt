@@ -37,7 +37,10 @@ class MoreEditorActivity:BaseActivity<MoreViewModel,ActivityMoreEditorBinding>(R
     }
 
     override fun initVariable() {
-
+        //点击返回
+        tv_return.setOnClickListener(View.OnClickListener {
+            finish()
+        })
     }
 
     /**

@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--
+    全透明：#00000000
+    半透明：#80000000
+    不透明：#FF000000
+    白色半透明：#80FFFFFF
+    红色30%透明：#4Dca0d0d
+-->
+
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="black">#000</color>
     <color name="green">#85D627</color>
     <color name="white">#fff</color>
+
+
+    <color name="Jiured">#AB2B2B</color>
+    <color name="red">#F44336</color>
+    <color name="black">#000000</color>
+    <color name="gray_word">#DFDFDF</color>
+    <color name="gray">#ECE9E9</color>
+    <color name="gray_Text">#8A8686</color>
+    <color name="carText">#B5000000</color>
+    <color name="toolbr">#FF5722</color>
+    <color name="home_tab_selected">#000000</color>
+    <color name="home_tab_unselected">#A2A2A2</color>
+    <color name="green_home">#80A55F</color>
+
+    <!--透明-->
+    <color name="white_lucency">#80FFFFFF</color>
+    <color name="green_lucency">#8080A55F</color>
+
+    <!--验证码-->
+    <color name="transparent">#00000000</color>
+    <color name="translucent_white">#ddd</color>
 </resources>

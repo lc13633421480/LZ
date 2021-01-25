@@ -15,7 +15,6 @@ open class BaseViewModel(val repository: SystemRepository):ViewModel() {
      * 定义一个网络请求状态的处理
      */
     protected var status:MutableLiveData<String> = MutableLiveData()
-
     /**
      * token刷新通知界面的数据状态
      */

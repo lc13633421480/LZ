@@ -48,5 +48,9 @@ class SystemRepository {
         serviceApi.Login(username,pw)
     }
 
+    suspend fun trendsList(command:Int,page : Int,size : Int) = withContext(Dispatchers.IO){
+        serviceApi.trendsList(command, page, size)
+    }
+
 
 }
