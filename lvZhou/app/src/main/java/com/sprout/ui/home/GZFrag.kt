@@ -35,7 +35,7 @@ class GZFrag:BaseFragment<GZViewModel,LayoutGzfragBinding>(R.layout.layout_gzfra
         mViewModel.data.observe(this, Observer {
             trends.clear()
             trends.addAll(it)
-            rlv_gz.adapter = adapter
+//            rlv_gz.adapter = adapter
             adapter!!.notifyDataSetChanged()
         })
     }
