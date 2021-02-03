@@ -56,6 +56,7 @@ class MoreEditorActivity:BaseActivity<MoreViewModel,ActivityMoreEditorBinding>(R
         fAdapter = FAdapter(supportFragmentManager)
         viewPager.adapter = fAdapter
 
+        //跳转页面
         txt_next.setOnClickListener(View.OnClickListener {
             intent = Intent(this,SubmitMoreActivity::class.java)
             intent.putExtra("data",decodeImgs())

@@ -5,6 +5,7 @@ import com.shop.net.RetrofitFactory
 import com.sprout.api.ServiceApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import okhttp3.RequestBody
 
 /**
  * 数据仓库
@@ -48,8 +49,23 @@ class SystemRepository {
         serviceApi.Login(username,pw)
     }
 
-    suspend fun trendsList(command:Int,page : Int,size : Int) = withContext(Dispatchers.IO){
-        serviceApi.trendsList(command, page, size)
+    suspend fun register(userName :String,userPsw:String,imei:String,lng:String,lat:String) = withContext(Dispatchers.IO){
+        serviceApi.register(userName,userPsw,imei,lng, lat)
+    }
+
+
+    /**
+     * 提交动态数据
+     */
+    suspend fun submitTrends(requestBody: RequestBody) = withContext(Dispatchers.IO){
+        serviceApi.submitTrends(requestBody)
+    }
+
+    /**
+     * 获取动态列表数据
+     */
+    suspend fun trendsList(command:Int,channelid:Int,page:Int,size:Int) = withContext(Dispatchers.IO){
+        serviceApi.trendsList(command,channelid,page,size)
     }
 
 

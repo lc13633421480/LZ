@@ -36,7 +36,6 @@ class TJFrag:BaseFragment<TJViewModel,LayoutTjfragBinding>(R.layout.layout_tjfra
         val tabName = ArrayList<String>()
         if(!isAdded)return
         mViewModel.data.observe(this, Observer {
-//            fragments.clear()
             for (i  in it.indices){
 //                var id = listcl.get(i).id
                 tabName.add(it.get(i).name)

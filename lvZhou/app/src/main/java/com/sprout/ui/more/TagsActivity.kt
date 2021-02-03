@@ -7,9 +7,10 @@ import com.sprout.BR
 import com.sprout.R
 import com.sprout.base.BaseActivity
 import com.sprout.base.IItemClick
+import com.sprout.bean.BrandData
+import com.sprout.bean.GoodData
 import com.sprout.databinding.ActivityTagsBinding
-import com.sprout.model.BrandData
-import com.sprout.model.GoodData
+
 import com.sprout.ui.more.adapter.BrandAdapter
 import com.sprout.ui.more.adapter.GoodAdapter
 import com.sprout.vm.more.TagsViewModel

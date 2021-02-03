@@ -9,16 +9,17 @@ import com.sprout.BR
 import com.sprout.R
 import com.sprout.base.BaseAdapter
 import com.sprout.base.IItemClick
-import com.sprout.model.BrandData
+import com.sprout.bean.BrandData
+
 
 /**
  * 品牌的adapter
  */
 class BrandAdapter(
-        context: Context,
-        list:List<BrandData.Data>,
-        layouts:SparseArray<Int>,
-        click: IItemClick<BrandData.Data>
+    context: Context,
+    list:List<BrandData.Data>,
+    layouts:SparseArray<Int>,
+    click: IItemClick<BrandData.Data>
 ): BaseAdapter<BrandData.Data>(context,list,layouts,click) {
     override fun bindData(binding: ViewDataBinding, data: BrandData.Data, layId: Int) {
         binding.setVariable(BR.brandItemClick,itemClick)

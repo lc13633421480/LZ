@@ -9,17 +9,16 @@ import com.sprout.BR
 import com.sprout.R
 import com.sprout.base.BaseAdapter
 import com.sprout.base.IItemClick
-import com.sprout.model.BrandData
-import com.sprout.model.GoodData
+import com.sprout.bean.GoodData
 
 /**
  * 商品的adapter
  */
 class GoodAdapter(
-        context: Context,
-        list:List<GoodData.Data>,
-        layouts:SparseArray<Int>,
-        click: IItemClick<GoodData.Data>
+    context: Context,
+    list:List<GoodData.Data>,
+    layouts:SparseArray<Int>,
+    click: IItemClick<GoodData.Data>
 ): BaseAdapter<GoodData.Data>(context,list,layouts,click) {
     override fun bindData(binding: ViewDataBinding, data: GoodData.Data, layId: Int) {
         binding.setVariable(BR.goodItemClick,itemClick)

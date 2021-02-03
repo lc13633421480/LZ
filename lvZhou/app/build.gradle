@@ -113,4 +113,8 @@ dependencies {
     compile 'com.github.hotchemi:permissionsdispatcher:2.2.0'//动态权限依赖
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.2.0'
 
+    //高德定位
+    implementation 'com.amap.api:location:5.2.0'
+    implementation 'com.amap.api:map2d:6.0.0'
+    implementation 'com.amap.api:search:7.7.0'
 }

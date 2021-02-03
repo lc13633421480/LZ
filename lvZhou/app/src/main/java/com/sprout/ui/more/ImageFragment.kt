@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_image.*
 class ImageFragment(
     var index:Int,
     var path:String
-):Fragment() {
+):Fragment(R.layout.fragment_image) {
 
     companion object{
         fun instance(i:Int,path:String):ImageFragment{
@@ -27,14 +27,14 @@ class ImageFragment(
     }
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        var view = inflater.inflate(R.layout.fragment_image,container,false)
-        return view
-    }
+//    override fun onCreateView(
+//        inflater: LayoutInflater,
+//        container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        var view = inflater.inflate(R.layout.fragment_image,container,false)
+//        return view
+//    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if(path.isNotEmpty()){

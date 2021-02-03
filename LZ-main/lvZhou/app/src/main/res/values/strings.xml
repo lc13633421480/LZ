@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lvZhou</string>
+
+    <string name="hint_login_username">用户名</string>
+    <string name="hint_login_pw">密码</string>
+
+</resources>

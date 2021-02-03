@@ -1,13 +1,9 @@
 package com.sprout.api
 
 
-import com.sprout.bean.ChannelData
-import com.sprout.bean.LoginData
-import com.sprout.bean.TrendsListData
-import com.sprout.model.BaseResp
-import com.sprout.model.BrandData
-import com.sprout.model.GoodData
-import io.reactivex.Flowable
+import com.sprout.bean.*
+import com.sprout.model.*
+import okhttp3.RequestBody
 import retrofit2.http.*
 
 /**
@@ -30,6 +26,7 @@ interface ServiceApi {
     suspend fun getGood(@Query("page") page:Int,@Query("size") size:Int):BaseResp<GoodData>
 
     //http://sprout.cdwan.cn/api/auth/login
+    //登录
     @POST("auth/login")
     @FormUrlEncoded
     suspend fun Login(
@@ -37,15 +34,37 @@ interface ServiceApi {
         @Field("password") pw: String
     ): BaseResp<LoginData>
 
-    //sprout.cdwan.cn/api/trends/submitTrends
-    //发布动态
-    @POST("trends/submitTrends")
+    /**
+     * 注册
+     */
+    @POST("auth/register")
     @FormUrlEncoded
-    suspend fun submit()
+    suspend fun register(@Field("username")userName :String,
+                         @Field("password")userPsw:String,
+                         @Field("imei")imei:String,
+                         @Field("lng")lng:String,
+                         @Field("lat")lat:String):
+            BaseResp<RegisterMessage>
+
+    /**
+     * 发布动态接口
+     */
+    @POST("trends/submitTrends")
+    suspend fun submitTrends(@Body trends:RequestBody):BaseResp<SubmitTrendsData>
 
     //sprout.cdwan.cn/api/trends/trendsList?command=1&page=2&size=5
-    //动态的列表数据
+    /**
+     * 获取动态数据
+     */
     @GET("trends/trendsList")
     suspend fun trendsList(@Query("command") command:Int,
-                           @Query("page")page : Int,@Query("size")size : Int):TrendsListData
+                           @Query("channelid") channelid:Int,
+                           @Query("page") page:Int,
+                           @Query("size") size: Int):BaseResp<List<TrendsData>>
+
+    /**
+     * 主题数据
+     */
+//    @GET("theme/getTheme")
+//    suspend fun getTheme():BaseResp<List<ThemeData>>
 }

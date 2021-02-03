@@ -1,4 +1,4 @@
-package com.sprout.model
+package com.sprout.bean
 
 
 

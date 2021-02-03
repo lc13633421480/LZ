@@ -1,4 +1,4 @@
-package com.sprout.model
+package com.sprout.bean
 
 data class BrandData(
     val count: Int,

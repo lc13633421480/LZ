@@ -1,18 +1,22 @@
 package com.sprout.ui.login
 
 import android.content.Intent
+import android.text.Editable
 import android.text.TextUtils
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.sprout.MainActivity
 import com.sprout.R
 import com.sprout.base.BaseActivity
 import com.sprout.databinding.ActivityLogBinding
+import com.sprout.ui.main.login.RegisterActivity
 import com.sprout.utils.MyMmkv
+import com.sprout.utils.ToastUtil
 import com.sprout.viewmodel.login.LogViewModel
 import kotlinx.android.synthetic.main.activity_log.*
 
@@ -47,8 +51,26 @@ class LogActivity : BaseActivity<LogViewModel,ActivityLogBinding>(R.layout.activ
 
     override fun initData() {
         btn_login.setOnClickListener(View.OnClickListener {
+//            val username = MyMmkv.getString("username")
+//            if(TextUtils.isEmpty(username)){
+//                ToastUtil.showToast(this, "还没注册，请先注册")
+//            }else{
+//                login()
+//            }
             login()
         })
+        btn_regi.setOnClickListener(View.OnClickListener {
+            intent = Intent(this,RegisterActivity::class.java)
+            startActivityForResult(intent,200)
+        })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == 200 && resultCode == 300){
+            val name = data!!.getStringExtra("name")
+            val pw = data!!.getStringExtra("pw")
+        }
     }
 
     private fun login() {

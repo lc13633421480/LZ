@@ -6,7 +6,7 @@
     <data>
          <variable
              name="vmTrend"
-             type="com.sprout.bean.TrendsListData.Data" />
+             type="com.sprout.bean.TrendsData" />
     </data>
 
 

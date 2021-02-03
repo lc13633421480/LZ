@@ -7,15 +7,16 @@ import com.sprout.R
 import com.sprout.base.BaseAdapter
 
 import com.sprout.base.IItemClick
-import com.sprout.bean.TrendsListData
+import com.sprout.bean.TrendsData
 
-class GZAdapter(context: Context, list: List<TrendsListData.Data>, layouts : SparseArray<Int>,
-                var click: IItemClick<TrendsListData.Data>)
-    : BaseAdapter<TrendsListData.Data>(context,list,layouts,click) {
+
+class GZAdapter(context: Context, list: List<TrendsData>, layouts : SparseArray<Int>,
+                var click: IItemClick<TrendsData>)
+    : BaseAdapter<TrendsData>(context,list,layouts,click) {
     override fun layoutId(position: Int): Int {
        return R.layout.item_rlv_gz
     }
 
-    override fun bindData(binding: ViewDataBinding, data: TrendsListData.Data, layId: Int) {
+    override fun bindData(binding: ViewDataBinding, data: TrendsData, layId: Int) {
     }
 }

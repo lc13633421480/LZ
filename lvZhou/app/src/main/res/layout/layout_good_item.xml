@@ -5,10 +5,10 @@
     <data>
         <variable
             name="goodData"
-            type="com.sprout.model.GoodData.Data" />
+            type="com.sprout.bean.GoodData"/>
         <variable
             name="goodItemClick"
-            type="com.sprout.base.IItemClick" />
+            type="com.sprout.base.IItemClick"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

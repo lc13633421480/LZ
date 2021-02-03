@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vmMain"
+            type="com.sprout.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <FrameLayout
+            android:id="@+id/fragments"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layout_nav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_nav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_home"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/layout_discover"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_home"
+                    android:src="@mipmap/main_nav_home_normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_discover"
+                app:layout_constraintLeft_toRightOf="@id/layout_home"
+                app:layout_constraintRight_toLeftOf="@id/layout_more"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_discover"
+                    android:src="@mipmap/main_nav_discover_normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_more"
+                app:layout_constraintLeft_toRightOf="@id/layout_discover"
+                app:layout_constraintRight_toLeftOf="@id/layout_message"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_more"
+                    android:src="@mipmap/main_nav_more_normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_message"
+                app:layout_constraintLeft_toRightOf="@id/layout_more"
+                app:layout_constraintRight_toLeftOf="@id/layout_mine"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_message"
+                    android:src="@mipmap/main_nav_message_normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_mine"
+                app:layout_constraintLeft_toRightOf="@id/layout_message"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_mine"
+                    android:src="@mipmap/main_nav_mine_normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
